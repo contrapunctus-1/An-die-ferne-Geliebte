@@ -9,7 +9,9 @@ pos =
   #}
 )
 
+posI = \markup \small \bold "I"
 posIII = \markup \small \bold "III"
+posIV = \markup \small \bold "IV"
 
 guitarDynamics = {
 
@@ -27,12 +29,12 @@ soprano = \relative c' {
   s2. | s2. | s2. |
 
   \barNumberCheck #4 % ... blaue Nebeland
-  f8\( aes c4\) c\( |
+  f8^\posIV \( aes c4\) c\( |
   f,4\) bes4. c8 |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
   bes4 a aes8\( bes\) |
-  <aes f>4 g <ees' bes ees,>8 <d bes ees,> |
+  <aes f>4 \startModernBarre #3 #3 g \stopBarre <ees' bes>8 <d bes> |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
   q4 <c aes ees>8 <bes g ees> <aes f d> <f d aes> |
@@ -48,10 +50,10 @@ alto = \relative c'' {
   \barNumberCheck #1 % Auf dem Hügel
   <bes g ees bes>4 \startModernBarre #6 #5 <bes g> \stopBarre <aes f> |
   <g ees> \startModernBarre #4 #4 <g ees g,> \stopBarre \oneVoice r |
-  r \voiceThree <g ees c g>^\posIII \oneVoice r8 \voiceThree <g ees g,> |
+  r \voiceThree <g ees c g>^\posIII \oneVoice r8 \voiceThree <g ees>^\posI |
 
   \barNumberCheck #4 % ... blaue Nebeland
-  c,4 <f c> <f ees c> |
+  c,4 <f c> <f ees> |
   d f g |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
@@ -74,7 +76,7 @@ tenor = \relative c {
   s2. | s2. |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
-  c4 c' bes |
+  c4 c' \parenthesize bes |
   bes ees s |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
@@ -96,10 +98,17 @@ bass = \relative c {
 
   \barNumberCheck #6 % ... fernen Triften sehend,
   c2 d4 |
-  ees2 <g, ees'>4 |
+  ees2
+  \set Staff.ottavation = #"8vb"
+  \once \override Staff.OttavaBracket.direction = #DOWN
+  \set Voice.middleCPosition = #1
+  g4 |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
-  aes4 aes8 bes bes bes |
+  aes4 aes8 bes bes
+  \unset Staff.ottavation
+  \unset Voice.middleCPosition
+  bes, |
   ees4 <ees g bes ees>2 |
   <ees f aes d>4 <ees f aes bes d>4. d'8 |
 
