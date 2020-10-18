@@ -9,9 +9,9 @@ pos =
   #}
 )
 
-posI = \markup \small \bold "I"
 posIII = \markup \small \bold "III"
 posIV = \markup \small \bold "IV"
+posVI = \markup \small \bold "VI"
 
 guitarDynamics = {
 
@@ -29,7 +29,7 @@ soprano = \relative c' {
   s2. | s2. | s2. |
 
   \barNumberCheck #4 % ... blaue Nebeland
-  f8^\posIV \( aes c4\) c\( |
+  f8-3^\posIV \( aes c4\) c\( |
   f,4\) bes4. c8 |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
@@ -50,10 +50,10 @@ alto = \relative c'' {
   \barNumberCheck #1 % Auf dem Hügel
   <bes g ees bes>4 \startModernBarre #6 #5 <bes g> \stopBarre <aes f> |
   <g ees> \startModernBarre #4 #4 <g ees g,> \stopBarre \oneVoice r |
-  r \voiceThree <g ees c g>^\posIII \oneVoice r8 \voiceThree <g ees>^\posI |
+  r \voiceThree <g ees c g>^\posIII \oneVoice r8 \voiceThree <g-2 ees-3>^\posVI |
 
   \barNumberCheck #4 % ... blaue Nebeland
-  c,4 <f c> <f ees> |
+  c,4-2 <f c> <f ees> |
   d f g |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
@@ -90,10 +90,10 @@ bass = \relative c {
   \barNumberCheck #1 % Auf dem Hügel ...
   ees4 s s |
   s ees \oneVoice r |
-  r \voiceTwo c \oneVoice r8 \voiceTwo bes |
+  r \voiceTwo c \oneVoice r8 \voiceTwo bes-1 |
 
   \barNumberCheck #4 % ... blaue Nebeland,
-  aes4 aes a-0 |
+  aes4-1 aes a-0 |
   bes d ees |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
