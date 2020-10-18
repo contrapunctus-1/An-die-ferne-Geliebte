@@ -37,7 +37,7 @@ soprano = \relative c' {
   <aes f>4 \startModernBarre #3 #3 g \stopBarre <ees' bes>8 <d bes> |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
-  q4 <c aes ees>8 <bes g ees> <aes f d> <f d aes> |
+  q4 <c ees,>8 <bes g ees> <aes f d> <f d aes> |
   <ees g,>4 \appoggiatura bes8( bes'4.) ees,8 |
   d4 \appoggiatura bes8( bes'4.) d,8 |
 
@@ -110,7 +110,7 @@ bass = \relative c {
   \unset Voice.middleCPosition
   bes, |
   ees4 <ees g bes ees>2 |
-  <ees f aes d>4 <ees f aes bes d>4. d'8 |
+  <f aes d>4 <ees aes d f>4. d'8 |
 
 }
 
