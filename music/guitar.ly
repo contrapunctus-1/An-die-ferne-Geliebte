@@ -48,8 +48,8 @@ alto = \relative c'' {
   \voiceThree
 
   \barNumberCheck #1 % Auf dem Hügel
-  <bes g ees bes>4 \startModernBarre #6 #5 <bes g> \stopBarre <aes f> |
-  <g ees> \startModernBarre #4 #4 <g ees g,> \stopBarre \oneVoice r |
+  <bes g ees bes>4 \startModernBarre #6 #5 <bes g> \stopBarre <aes-2 f-3> |
+  <g-3 ees-4> <g ees g,>^\posVI \oneVoice r |
   r \voiceThree <g ees c g>^\posIII \oneVoice r8 \voiceThree <g-2 ees-3>^\posVI |
 
   \barNumberCheck #4 % ... blaue Nebeland
