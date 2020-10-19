@@ -24,17 +24,18 @@ guitarDynamics = {
 soprano = \relative c' {
   \common
   \voiceOne
+  \set fingeringOrientations = #'(right)
 
   \barNumberCheck #1 % Auf dem Hügel
   s2. | s2. | s2. |
 
   \barNumberCheck #4 % ... blaue Nebeland
-  f8-3^\posIV \( aes c4\) c\( |
-  f,4\) bes4. c8 |
+  <f-3>8^\posIV \( aes c4\) c\( |
+  f,4\) s2 |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
-  bes4 a aes8\( bes\) |
-  <aes f>4 \startModernBarre #3 #3 g \stopBarre <ees' bes>8 <d bes> |
+  s2. |
+  s2 <ees'-4 bes-3>8 <d-1 bes-3> |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
   q4 <c ees,>8 <bes g ees> <aes f d> <f d aes> |
@@ -46,6 +47,7 @@ soprano = \relative c' {
 alto = \relative c'' {
   \common
   \voiceThree
+  \set fingeringOrientations = #'(right)
 
   \barNumberCheck #1 % Auf dem Hügel
   <bes g ees bes>4 \startModernBarre #6 #5 <bes g> \stopBarre <aes-2 f-3> |
@@ -53,12 +55,12 @@ alto = \relative c'' {
   r \voiceThree <g ees c g>^\posIII \oneVoice r8 \voiceThree <g-2 ees-3>^\posVI |
 
   \barNumberCheck #4 % ... blaue Nebeland
-  c,4-2 <f c> <f ees> |
+  <c,-2>4 <f c> <f ees> |
   d f g |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
   <ees ges>2 f4 |
-  s2. |
+  f4 s2 |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
   s2. |
@@ -68,6 +70,7 @@ alto = \relative c'' {
 tenor = \relative c {
   \common
   \voiceThree
+  \set fingeringOrientations = #'(right)
 
   \barNumberCheck #1 % Auf dem Hügel
   s2. | s2. | s2. |
@@ -76,7 +79,7 @@ tenor = \relative c {
   s2. | s2. |
 
   \barNumberCheck #6 % ... fernen Triften sehend,
-  c4 c' \parenthesize bes |
+  c4 c' bes |
   bes ees s |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
@@ -86,6 +89,7 @@ tenor = \relative c {
 bass = \relative c {
   \common
   \voiceTwo
+  \set fingeringOrientations = #'(right)
 
   \barNumberCheck #1 % Auf dem Hügel ...
   ees4 s s |
@@ -102,15 +106,15 @@ bass = \relative c {
   \set Staff.ottavation = #"8vb"
   \once \override Staff.OttavaBracket.direction = #DOWN
   \set Voice.middleCPosition = #1
-  g4 |
+  <g-0>4 |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
   aes4 aes8 bes bes
   \unset Staff.ottavation
   \unset Voice.middleCPosition
   bes, |
-  ees4 <ees g bes ees>2 |
-  <f aes d>4 <ees aes d f>4. d'8 |
+  ees4 <ees g bes ees>2 \startModernBarre #6 #5 |
+  <f aes d>4 <ees aes d-2 f>4. d'8 \stopBarre |
 
   \barNumberCheck #11
   f8 <aes, f>8 q <g e> <bes g> <aes f> |
