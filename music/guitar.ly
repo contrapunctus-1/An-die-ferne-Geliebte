@@ -112,6 +112,15 @@ bass = \relative c {
   ees4 <ees g bes ees>2 |
   <f aes d>4 <ees aes d f>4. d'8 |
 
+  \barNumberCheck #11
+  f8 <aes, f>8 q <g e> <bes g> <aes f> |
+  <g ees> r ees8 r16 ees ees,8 r |
+  r4 c''8 r16 c c,8 bes |
+  aes8 r aes'8 r16 <aes aes,> <a a,>8 r |
+  <bes bes,>8 r <bes d,>8 r16 q <bes ees,>8 r |
+  r4 <ees c>8 r16 <c c,> <d bes d,>8 r |
+  r4 ees8 r16 <bes g> q8 q |
+
 }
 
 guitar = <<
