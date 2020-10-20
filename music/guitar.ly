@@ -13,6 +13,17 @@ posIII = \markup \small \bold "III"
 posIV = \markup \small \bold "IV"
 posVI = \markup \small \bold "VI"
 
+ottavaStart = {
+  \set Staff.ottavation = #"8vb"
+  \once \override Staff.OttavaBracket.direction = #DOWN
+  \set Voice.middleCPosition = #1
+}
+
+ottavaStop = {
+  \unset Staff.ottavation
+  \unset Voice.middleCPosition
+}
+
 guitarDynamics = {
 
   \barNumberCheck #1 % Auf dem Hügel
@@ -114,17 +125,10 @@ bass = \relative c {
 
   \barNumberCheck #6 % ... fernen Triften sehend,
   c2 d4 |
-  ees2
-  \set Staff.ottavation = #"8vb"
-  \once \override Staff.OttavaBracket.direction = #DOWN
-  \set Voice.middleCPosition = #1
-  <g-0>4 |
+  ees2 \ottavaStart <g-0>4 |
 
   \barNumberCheck #8 % ... dich, Geliebte, fand.
-  aes4 aes8 bes bes
-  \unset Staff.ottavation
-  \unset Voice.middleCPosition
-  bes, |
+  aes4 aes8 bes bes \ottavaStop bes, |
   ees4 <ees g bes ees>2 \startModernBarre #6 #5 |
   <f aes d>4 <ees aes d-2 f>4. d'8 \stopBarre |
 
