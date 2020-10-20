@@ -42,6 +42,18 @@ soprano = \relative c' {
   <ees g,>4 \appoggiatura bes8( bes'4.) ees,8 |
   d4 \appoggiatura bes8( bes'4.) d,8 |
 
+  \barNumberCheck #11 % Weit bin ich ...
+  f8 <aes, f> q <g e> <bes g> <aes f> |
+  <g' ees>8 r <g bes,>8 r16 q q8 r |
+  r4 <g ees>8 r16 q <ees' aes, ees>8 <g, ees> |
+  <f c>8 r q8 r16 q <c' f, ees c>8 r |
+  <f, d>8 r <bes f>8 r16 q <bes g>8 r |
+  r4 <a ges>8 r16 <ges' aes, ges> <f aes, f>8 r |
+  r4 g,8 r16 f' <ees ees,>8 <d ees,> |
+  << \relative c'' { d4\( c8\) <bes ees,> <aes d,> <f d aes> | } \\ \relative c' { ees4. s | } >>
+  <ees, g,>4 \appoggiatura bes8 bes'4.-> e,8 |
+  <d aes f>4 \appoggiatura bes8 bes'4.-> d,8 |
+
 }
 
 alto = \relative c'' {
@@ -116,7 +128,7 @@ bass = \relative c {
   ees4 <ees g bes ees>2 \startModernBarre #6 #5 |
   <f aes d>4 <ees aes d-2 f>4. d'8 \stopBarre |
 
-  \barNumberCheck #11
+  \barNumberCheck #11 % Weit bin ich ...
   f8 <aes, f>8 q <g e> <bes g> <aes f> |
   <g ees> r ees8 r16 ees ees,8 r |
   r4 c''8 r16 c c,8 bes |
@@ -124,7 +136,14 @@ bass = \relative c {
   <bes bes,>8 r <bes d,>8 r16 q <bes ees,>8 r |
   r4 <ees c>8 r16 <c c,> <d bes d,>8 r |
   r4 ees8 r16 <bes g> q8 q |
-
+  << \relative c' {
+    bes8 b c <bes g bes,> <aes f bes> <bes, bes,>
+  }
+     \\ \relative c {
+       aes4. s |
+     } >>
+  <ees ees,>4 <ees bes g ees>8 r16 <g ees> <bes ees>8 r |
+  <ees, ees,>4 <d aes f ees>8 r16 <f d> <aes f>8 d |
 }
 
 guitar = <<
