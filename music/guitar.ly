@@ -134,8 +134,8 @@ bass = \relative c {
 
   \barNumberCheck #11 % Weit bin ich ...
   f8 <aes, f>8 q <g e> <bes g> <aes f> |
-  <g ees> r ees8 r16 ees ees,8 r |
-  r4 c''8 r16 c c,8 bes |
+  <g ees> r ees8 r16 ees \ottavaStart ees8 \ottavaStop r |
+  r4 c'8 r16 c c,8 bes |
   aes8 r aes'8 r16 <aes aes,> <a a,>8 r |
   <bes bes,>8 r <bes d,>8 r16 q <bes ees,>8 r |
   r4 <ees c>8 r16 <c c,> <d bes d,>8 r |
